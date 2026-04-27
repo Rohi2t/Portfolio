@@ -4,24 +4,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const assetPath = (filename: string) => `${import.meta.env.BASE_URL}${filename}`;
+
 const slides = [
   {
     title: 'OBJECT DETECTION AND TRACKING USING LIDAR',
     sub: 'NVIDIA JETSON • ROS • C++ • PCL',
     detail: 'Architected and implemented a LiDAR perception pipeline with ground segmentation and object detection using JPDA, enabling reliable multi-object association in dynamic automotive environments. Achieved 60ms end-to-end inference latency.',
-    image: '/project-lidar.jpg',
+    image: assetPath('project-lidar.jpg'),
   },
   {
     title: 'HARSH ACCELERATION AND BRAKING DETECTION',
     sub: 'IMU • GYROSCOPE • EMBEDDED C • FILTERING',
     detail: 'Developed real-time harsh event detection algorithms for acceleration, braking, and cornering using IMU and gyroscope data. Implemented noise filtering and latency-optimized logic for embedded execution.',
-    image: '/project-imu.jpg',
+    image: assetPath('project-imu.jpg'),
   },
   {
     title: 'LOCOMOTIVE SIMULATION INTEGRATION',
     sub: 'MODBUS • TCP/IP • MATLAB • HIL • PLC',
     detail: 'Delivered real-time locomotive simulation and control integration for Indian Railways. Integrated MATLAB auto-generated C code with a backend server over LAN-based WebSockets. Designed a Hardware-in-the-Loop (HIL) communication pipeline interfacing PLC hardware.',
-    image: '/project-railway.jpg',
+    image: assetPath('project-railway.jpg'),
   },
 ];
 
